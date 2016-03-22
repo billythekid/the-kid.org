@@ -41,7 +41,7 @@ new Vue({
         pickWinners: function () {
             this.folk = Object.create(this.contestants);
             this.winners = [];
-            this.prizes.forEach(function (element) {
+            shuffleArray(this.prizes).forEach(function (element) {
                 var random = Math.floor(Math.random() * this.folk.length);
                 var winner = this.folk[random] || "NO WINNER, BOO!";
                 this.winners.push({
@@ -60,7 +60,16 @@ new Vue({
         clearWinners: function () {
             this.winners = [];
         }
-
     }
 });
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
 //# sourceMappingURL=all.js.map
