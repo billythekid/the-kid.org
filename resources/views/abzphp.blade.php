@@ -43,39 +43,40 @@
                     <i class="fa fa-5x fa-random"></i>
                 </div>
             </div>
-
-            <div class="col-md-5">
-                <p v-for="contestant in contestants">
-                    <button class="btn btn-danger" @click="removeContestant($index)"><i class="fa fa-2x fa-trash"></i>
-                    </button>
-                    @{{ contestant }}
-                </p>
-            </div>
-            <div class="col-md-5">
-                <p v-for="prize in prizes">
-                    <button class="btn btn-danger" @click="removePrize($index)"><i class="fa fa-2x fa-trash"></i>
-                    </button>
-                    @{{ prize.name }}
-                </p>
-            </div>
-
-            <div class="results panel panel-success" v-if="winners.length">
-                <div class="panel-heading">
-                    <h1>TONIGHT'S WINNERS!
-                        <button class="close" @click='clearWinners'>&times;</button></h1>
-                </div>
-                <table class="table table-hover">
-                    <tr v-for="winner in winners">
-                        <td>
-                            <i class="fa fa-2x fa-gift"></i> <span class="lead">@{{ winner.prize.name }}</span>
-                        </td>
-                        <td>
-                            <i class="fa fa-2x fa-user"></i> <span class="lead">@{{ winner.name }}</span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
         </div>
+
+        <div class="col-md-5">
+            <p v-for="contestant in contestants">
+                <button class="btn btn-danger" @click="removeContestant($index)"><i class="fa fa-2x fa-trash"></i>
+                </button>
+                @{{ contestant }}
+            </p>
+        </div>
+        <div class="col-md-5">
+            <p v-for="prize in prizes">
+                <button class="btn btn-danger" @click="removePrize($index)"><i class="fa fa-2x fa-trash"></i>
+                </button>
+                @{{ prize.name }}
+            </p>
+        </div>
+
+        <div class="results panel panel-success" v-if="winners.length">
+            <div class="panel-heading">
+                <h1>TONIGHT'S WINNERS!
+                    <button class="close" @click='clearWinners'>&times;</button></h1>
+            </div>
+            <table class="table table-hover">
+                <tr v-for="winner in winners">
+                    <td>
+                        <i class="fa fa-2x fa-gift"></i> <span class="lead">@{{ winner.prize.name }}</span>
+                    </td>
+                    <td>
+                        <i class="fa fa-2x fa-user"></i> <span class="lead">@{{ winner.name }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
     </div>
 @endsection
 
