@@ -13,9 +13,11 @@ new Vue({
     el: '#app',
     data: {
         contestants: [],
+        folk: [],
         prizes: [],
         winners: [],
-        won: false
+        won: false,
+        limitPrizes: true
     },
     methods: {
         addContestant: function () {
@@ -37,15 +39,25 @@ new Vue({
             this.prizes.splice(index, 1);
         },
         pickWinners: function () {
+            this.folk = Object.create(this.contestants);
             this.winners = [];
             this.prizes.forEach(function (element) {
+                var random = Math.floor(Math.random() * this.folk.length);
+                var winner = this.folk[random] || "NO WINNER, BOO!";
                 this.winners.push({
-                    name: this.contestants[Math.floor(Math.random() * this.contestants.length)],
+                    name: winner,
                     prize: element
                 });
+                if (this.limitPrizes) {
+                    if (this.folk.length > 1) {
+                        this.folk.splice(random, 1);
+                    } else {
+                        this.folk = [];
+                    }
+                }
             }, this);
         },
-        clearWinners: function() {
+        clearWinners: function () {
             this.winners = [];
         }
 

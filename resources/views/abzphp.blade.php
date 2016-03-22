@@ -42,6 +42,8 @@
                     <div class="prizeButton img-rounded btn-success text-center" v-on:click="pickWinners">
                         <i class="fa fa-5x fa-random"></i>
                     </div>
+                    <label for="newPrize">One Prize per Contestant?</label>
+                    <input type="checkbox" v-model="limitPrizes">
                 </div>
             </div>
 
