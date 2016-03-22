@@ -33,7 +33,7 @@ new Vue({
         pickWinners: function () {
             this.folk = Object.create(this.contestants);
             this.winners = [];
-            shuffleArray(this.prizes).forEach(function (element) {
+            shuffleArray(Object.create(this.prizes)).forEach(function (element) {
                 var random = Math.floor(Math.random() * this.folk.length);
                 var winner = this.folk[random] || "NO WINNER, BOO!";
                 this.winners.push({
