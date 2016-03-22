@@ -36,6 +36,9 @@ new Vue({
                     prize: element
                 });
             }, this);
+        },
+        clearWinners: function() {
+            this.winners = [];
         }
 
     }

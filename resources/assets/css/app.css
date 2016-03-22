@@ -1,8 +1,18 @@
 div.results {
     position: absolute;
     top: 1em;
-    bottom: 1em;
-    left: 1em;
-    right: 1em;
+    bottom: 10%;
+    left: 20%;
+    right: 20%;
     overflow: auto;
+}
+
+div.prizeButton {
+    width: 10em;
+    height: 10em;
+    line-height: 13em;
+}
+
+.jumbotron {
+    background-color: transparent;
 }

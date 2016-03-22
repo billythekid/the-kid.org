@@ -10,7 +10,9 @@
 </head>
 <body>
 <div class="container">
-    @yield('content')
+    <div class="main">
+        @yield('content')
+    </div>
 </div>
 <script src="{{ elixir('js/all.js') }}"></script>
 @yield('scripts')
