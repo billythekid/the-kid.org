@@ -16,4 +16,7 @@ div.prizeButton {
 .jumbotron {
     background-color: transparent;
 }
+[v-cloak] {
+    display: none;
+}
 /*# sourceMappingURL=all.css.map */
