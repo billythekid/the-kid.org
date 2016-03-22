@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +25,10 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::get('php', function(){
+        return view('abzphp');
+    });
 });

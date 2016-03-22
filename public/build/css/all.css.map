@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"all.css","sourcesContent":["div.results {\n    position: absolute;\n    top: 1em;\n    bottom: 1em;\n    left: 1em;\n    right: 1em;\n    overflow: auto;\n}"],"sourceRoot":"/source/"}
