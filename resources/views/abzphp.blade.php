@@ -65,23 +65,26 @@
                 </p>
             </div>
 
-            <div class="results panel panel-success" v-if="winners.length">
-                <div class="panel-heading">
-                    <h1>TONIGHT'S WINNERS!
-                        <button class="close" v-on:click='clearWinners'>&times;</button>
-                    </h1>
+            <div class="resultsWrapper" v-if="winners.length">
+                <div class="results panel panel-success">
+                    <div class="panel-heading">
+                        <h1>TONIGHT'S WINNERS!
+                            <button class="close" v-on:click='clearWinners'>&times;</button>
+                        </h1>
+                    </div>
+                    <table class="table table-hover">
+                        <tr v-for="winner in winners">
+                            <td>
+                                <i class="fa fa-2x fa-user"></i> <span class="lead">@{{ winner.name }}</span>
+                            </td>
+                            <td>
+                                <i class="fa fa-2x fa-gift"></i> <span class="lead">@{{ winner.prize.name }}</span>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <table class="table table-hover">
-                    <tr v-for="winner in winners">
-                        <td>
-                            <i class="fa fa-2x fa-user"></i> <span class="lead">@{{ winner.name }}</span>
-                        </td>
-                        <td>
-                            <i class="fa fa-2x fa-gift"></i> <span class="lead">@{{ winner.prize.name }}</span>
-                        </td>
-                    </tr>
-                </table>
             </div>
+
         </div>
     </div>
 @endsection

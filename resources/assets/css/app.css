@@ -1,10 +1,20 @@
-div.results {
+div.resultsWrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
     position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+div.results {
     top: 1em;
-    bottom: 10%;
     left: 20%;
     right: 20%;
+    bottom: 10%;
     overflow: auto;
+    position: fixed;
 }
 
 div.prizeButton {
@@ -16,6 +26,7 @@ div.prizeButton {
 .jumbotron {
     background-color: transparent;
 }
+
 [v-cloak] {
     display: none;
 }
