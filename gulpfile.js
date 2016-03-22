@@ -16,7 +16,7 @@ elixir(function (mix) {
     //mix.copy('node_modules/bootstrap-sass/assets/fonts', 'resources/assets/fonts');
     //mix.copy('node_modules/font-awesome/fonts', 'resources/assets/fonts');
 
-    mix.copy('resources/assets/fonts','public/build/fonts');
+    //mix.copy('resources/assets/fonts','public/build/fonts');
 
     mix.sass(['app.scss'])
         .styles([
