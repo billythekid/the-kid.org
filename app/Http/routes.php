@@ -34,5 +34,5 @@
             $endpoint = request()->path();
 
             return view('abzphp', compact('endpoint'));
-        })->where('endpoint', "(php|giveaway|draw|prizedraw)?");
+        })->where('endpoint', "(?i)php|giveaway|draw|prizedraw(?-i)");
     });
