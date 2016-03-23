@@ -1,9 +1,10 @@
 @extends('layouts.app')
-@section('title', "Giveaway!")
+@section('title', ($endpoint != 'php') ? ucfirst($endpoint).'!' : 'Giveaway!' )
 @section('content')
 
     <div class="jumbotron">
         <h1>@yield('title')</h1>
+        <p></p>
     </div>
 
     <div id="app">
