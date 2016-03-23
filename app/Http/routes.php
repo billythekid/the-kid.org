@@ -28,7 +28,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('php', function(){
+    Route::get( '{endpoint}', function(){
         return view('abzphp');
-    });
+    })->where('endpoint', '(php|giveaway|draw)?');
 });

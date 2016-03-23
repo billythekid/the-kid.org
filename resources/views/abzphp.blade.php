@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('title', "Aberdeen PHP - Giveaway!")
+@section('title', "Giveaway!")
 @section('content')
 
     <div class="jumbotron">
-        <h1>Aberdeen PHP Prize Draw</h1>
+        <h1>@yield('title')</h1>
     </div>
 
     <div id="app">
@@ -68,7 +68,7 @@
             <div class="resultsWrapper" v-if="winners.length">
                 <div class="results panel panel-success">
                     <div class="panel-heading">
-                        <h1>TONIGHT'S WINNERS!
+                        <h1>WINNERS...
                             <button class="close" v-on:click='clearWinners'>&times;</button>
                         </h1>
                     </div>
